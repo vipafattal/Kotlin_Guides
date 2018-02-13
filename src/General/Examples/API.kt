@@ -1,3 +1,5 @@
+package General.Examples
+
 import java.util.*
 import kotlin.properties.Delegates
 
@@ -31,7 +33,7 @@ interface serverCallBack {
 
 fun Call(URL: String) {
     //some operation on URL
-    val callRead=ReadProductFromServer()
+    val callRead= ReadProductFromServer()
     Response().onResponse(1 /*number of objects to read*/) {
         callRead.startRead()
     }
