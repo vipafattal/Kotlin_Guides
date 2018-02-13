@@ -2,6 +2,12 @@ import java.util.*
 import kotlin.properties.Delegates
 
 typealias Product = String
+open class API {
+    lateinit var objName: Any
+    lateinit var name: Product
+    lateinit var info: Product
+}
+
 interface serverCallBack {
     var responseCode: Int
     fun onResponse(numberOfExecution: Int, execute: () -> API): List<API>
@@ -22,11 +28,6 @@ interface serverCallBack {
     }
 }
 
-open class API {
-    lateinit var objName: Any
-    lateinit var name: Product
-    lateinit var info: Product
-}
 
 fun Call(URL: String) {
     //some operation on URL
